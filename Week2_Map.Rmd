@@ -1,0 +1,24 @@
+---
+title: "Week 2 Project"
+author: "Robert B. Jansen"
+date: "May 9, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r, echo=FALSE}
+library(leaflet)
+```
+ ### Create a map using leaflet.  I am adding a point of interest to the map.  The point I chose is the Smithsonian Institution in Washington D.C.
+ Decimal Degrees:
+Latitude: 38.888723
+Longitude: -77.0258099
+
+```{r, echo=FALSE}
+my_map<-leaflet() %>%
+  addTiles()      
+ my_map <-my_map %>%
+         addMarkers(lat=38.888723, lng=-77.0258099, popup = "Smithsonian Institution, Washington D.C.")
+ my_map
